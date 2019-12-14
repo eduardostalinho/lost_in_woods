@@ -27,6 +27,7 @@ class Player:
         elif direction == RIGHT:
             self.x += 1
 
-    def interact(self, other):
+    def start_interaction(self, other):
         interaction = random.choice(INTERACTIONS)
         self.status = INTERACTING, interaction, other
+        other.status = INTERACTING, interaction, self

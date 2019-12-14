@@ -37,8 +37,3 @@ class Stage:
                 (p1.y - 1 == p2.y),
             ]
         )
-
-
-def interact(player1, player2):
-    interactions = ["FIGHT", "FRIENDLY"]
-    interaction = random.choice(interactions)

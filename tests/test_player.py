@@ -40,10 +40,10 @@ def test_player_move_left():
     assert player.x == -1
 
 
-def test_interaction():
+def test_start_interaction():
     player = Player(0, 0)
     other_player = Player(1, 0)
-    player.interact(other_player)
+    player.start_interaction(other_player)
     assert player.status[0] == INTERACTING
     assert player.status[1] in INTERACTIONS
     assert player.status[2] == other_player
