@@ -1,3 +1,6 @@
+# Lost on Woods [![Build Status](https://travis-ci.org/eduardostalinho/lost_in_woods.svg?branch=master)](https://travis-ci.org/eduardostalinho/lost_in_woods)
+
+# O Jogo
 Ricky está perdido na floresta cercado por pessoas de diferentes clãs.
 Para sobreviver ele deve manter sua reputação completando missões para essa pessoas.
 
