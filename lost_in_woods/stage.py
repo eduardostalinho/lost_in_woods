@@ -19,9 +19,24 @@ class Stage:
 
         return self.players
 
+    def collisions(self):
+        collisions = [
+            (p1, p2)
+            for i, p1 in enumerate(self.players)
+            for p2 in self.players[i:]
+            if self.check_collision(p1, p2)
+        ]
+        return collisions
 
-def check_collision(p1, p2):
-    return p1.x + 1 == p2.x or p1.x - 1 == p2.x or p1.y + 1 == p2.y or p1.y - 1 == p2.y
+    def check_collision(self, p1, p2):
+        return any(
+            [
+                (p1.x + 1 == p2.x),
+                (p1.x - 1 == p2.x),
+                (p1.y + 1 == p2.y),
+                (p1.y - 1 == p2.y),
+            ]
+        )
 
 
 def interact(player1, player2):
