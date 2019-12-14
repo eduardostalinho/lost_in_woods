@@ -4,5 +4,7 @@ python:
 install:
   - pip install -r dev-requirements.txt
 script:
+  - wily build
+  - wily diff -r HEAD^1
   - pre-commit run -a
   - pytest -vvs

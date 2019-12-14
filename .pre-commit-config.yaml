@@ -9,11 +9,3 @@ repos:
     rev: 19.3b0
     hooks:
     -   id: black
--   repo: local
-    hooks:
-    -   id: wily
-        name: wily
-        entry: wily diff
-        verbose: true
-        language: python
-        additional_dependencies: [wily]
