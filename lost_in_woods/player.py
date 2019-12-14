@@ -14,7 +14,7 @@ class Player:
             self.y -= 1
         elif direction == 'DOWN':
             self.y += 1
-        elif direction == 'ĹEFT':
+        elif direction == 'LEFT':
             self.x -= 1
         elif direction == 'RIGHT':
             self.x += 1

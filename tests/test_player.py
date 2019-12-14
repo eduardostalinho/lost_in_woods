@@ -29,7 +29,7 @@ def test_player_move_right():
     assert player.y == 0
     assert player.x == 1
 
-def _test_player_move_left():
+def test_player_move_left():
     player = Player(0, 0)
     player.move('LEFT')
     assert player.y == 0
