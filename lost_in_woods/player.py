@@ -10,12 +10,12 @@ class Player:
             "CLAN1": 50
         }
     def move(self, direction):
-        if direction == 'UP':
+        if direction == UP:
             self.y -= 1
-        elif direction == 'DOWN':
+        elif direction == DOWN:
             self.y += 1
-        elif direction == 'LEFT':
+        elif direction == LEFT:
             self.x -= 1
-        elif direction == 'RIGHT':
+        elif direction == RIGHT:
             self.x += 1
 

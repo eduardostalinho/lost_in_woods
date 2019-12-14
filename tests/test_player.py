@@ -1,4 +1,5 @@
 from lost_in_woods import Player
+from lost_in_woods.constants import UP, DOWN, LEFT, RIGHT
 
 
 def test_player_has_position_xy():
@@ -11,26 +12,26 @@ def test_player_has_position_xy():
 
 def test_player_move_up():
     player = Player(0, 0)
-    player.move('UP')
+    player.move(UP)
     assert player.y == -1
     assert player.x == 0
 
 
 def test_player_move_down():
     player = Player(0, 0)
-    player.move('DOWN')
+    player.move(DOWN)
     assert player.y == 1
     assert player.x == 0
 
 
 def test_player_move_right():
     player = Player(0, 0)
-    player.move('RIGHT')
+    player.move(RIGHT)
     assert player.y == 0
     assert player.x == 1
 
 def test_player_move_left():
     player = Player(0, 0)
-    player.move('LEFT')
+    player.move(LEFT)
     assert player.y == 0
     assert player.x == -1
