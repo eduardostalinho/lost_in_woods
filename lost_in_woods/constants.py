@@ -1,0 +1,4 @@
+CLAN_1 = 'CLAN1'
+CLAN_2 = 'CLAN2'
+
+CLANS = [CLAN_1, CLAN_2]
