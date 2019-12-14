@@ -1,6 +1,4 @@
-from dataclasses import dataclass
-
-@dataclass
+from .constants import UP, LEFT, DOWN, RIGHT
 class Player:
     def __init__(self, x, y, clan=None):
         self.x = x
