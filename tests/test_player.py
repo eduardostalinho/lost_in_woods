@@ -10,6 +10,7 @@ def test_player_has_position_xy():
     assert player.y == y
     assert player.clan is None
 
+
 def test_player_move_up():
     player = Player(0, 0)
     player.move(UP)
@@ -29,6 +30,7 @@ def test_player_move_right():
     player.move(RIGHT)
     assert player.y == 0
     assert player.x == 1
+
 
 def test_player_move_left():
     player = Player(0, 0)

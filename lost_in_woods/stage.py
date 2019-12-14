@@ -19,9 +19,11 @@ class Stage:
 
         return players
 
+
 def check_collision(p1, p2):
     return p1.x + 1 == p2.x or p1.x - 1 == p2.x or p1.y + 1 == p2.y or p1.y - 1 == p2.y
 
+
 def interact(player1, player2):
-    interactions = ['FIGHT', 'FRIENDLY']
+    interactions = ["FIGHT", "FRIENDLY"]
     interaction = random.choice(interactions)
