@@ -15,7 +15,9 @@ def test_populate_with_players():
     height = 120
     stage = Stage(width, height)
 
-    players = stage.populate(2)
+    players = stage.populate(1)
 
-    assert len(players) == 2
+    assert len(players) == 1
     assert players[0].clan in CLANS
+    assert players[0].x in range(width)
+    assert players[0].x in range(height)
