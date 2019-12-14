@@ -1,13 +1,13 @@
 import random
-from dataclasses import dataclass
+
 from .player import Player
 from .constants import CLANS
 
 
-@dataclass
 class Stage:
-    width: int
-    height: int
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
     def populate(self, n_players):
         players = []
