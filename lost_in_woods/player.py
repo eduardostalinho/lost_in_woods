@@ -16,6 +16,25 @@ class Player:
         self.y = y
         self.clan = clan
         self.status = (MOVING,)
+        self.health_points = 10
+
+    def act(self):
+        if self.status[0] == "MOVING":
+            self.move(random.choice([UP, LEFT, RIGHT, DOWN]))
+        elif self.status[0] == "INTERACTING":
+            self.interact(self.status[1], self.status[2])
+
+    def interact(self, interaction, player):
+        if interaction == FIGHT:
+            self.fight(player)
+        if interaction == FRIENDLY:
+            self.make_friend(player)
+
+    def make_friend(self, other_player):
+        pass
+
+    def fight(self, other_player):
+        other_player.health_points -= 1
 
     def move(self, direction):
         if direction == UP:
