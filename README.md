@@ -27,3 +27,8 @@ pre-commit install
 ```bash
 alias discipline="pytest -vvs && git add -i && git commit"
 ```
+
+Sempre use o alias discipline para commitar.
+```bash
+discipline
+```
