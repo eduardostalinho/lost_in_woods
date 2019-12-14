@@ -1,4 +1,4 @@
-from lost_in_woods import Player
+from lost_in_woods.player import Player, MOVING, INTERACTING, INTERACTIONS
 from lost_in_woods.constants import UP, DOWN, LEFT, RIGHT
 
 
@@ -9,6 +9,7 @@ def test_player_has_position_xy():
     assert player.x == x
     assert player.y == y
     assert player.clan is None
+    assert player.status == (MOVING,)
 
 
 def test_player_move_up():
@@ -37,3 +38,12 @@ def test_player_move_left():
     player.move(LEFT)
     assert player.y == 0
     assert player.x == -1
+
+
+def test_interaction():
+    player = Player(0, 0)
+    other_player = Player(1, 0)
+    player.interact(other_player)
+    assert player.status[0] == INTERACTING
+    assert player.status[1] in INTERACTIONS
+    assert player.status[2] == other_player
